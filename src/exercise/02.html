@@ -22,11 +22,12 @@
     // This is similar to ReactDOM.createRoot().render()
     const element = React.createElement('div', {
       className : 'container',
-      children : 'hello world vartika'
+      children : [ React.createElement('h1', { key: 'heading' },  'Hello'),
+      React.createElement('span', { key: 'paragraph' },'vartika')
+      ],
     } )
-    const root = ReactDOM.createRoot(rootElement);
-
-// Render the React element into the root
+   
+const root = ReactDOM.createRoot(rootElement);
 root.render(element);
     // 🐨 Please re-implement the regular document.createElement code above
     // with these React API calls
